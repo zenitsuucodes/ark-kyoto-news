@@ -93,14 +93,7 @@ $('time.article-header-info__time')
 
 const figImg = $('.article-header-img-main img').first()
 figImg.attr('src', img).removeAttr('srcset')
-$('.article-header-img-main__caption')
-  .attr(
-    'data-en',
-    "A chimpanzee named Bantu approaches a 4-year-old boy inside the outdoor chimpanzee habitat at Kyoto City Zoo on Sept. 27, 2026, before the zoo's emergency team intervened. (Ark Kyoto News)",
-  )
-  .text(
-    '2026年9月27日、京都市動物園の屋外チンパンジー飼育エリア内で、4歳の男の子に近づくチンパンジー「バントゥ」。園の緊急対応チームが介入する前の様子。（アーク京都ニュース）',
-  )
+$('.article-header-img-main__caption').remove()
 
 $('.article-sns__link.--copy').each(function () {
   $(this).attr('data-title', titleEn)
