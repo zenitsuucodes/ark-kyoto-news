@@ -1,0 +1,10 @@
+{
+  "id": "92001",
+  "status": "draft",
+  "titleJa": "京都市動物園で子どもが飼育エリアに侵入 チンパンジーを緊急射殺",
+  "titleEn": "Child enters chimpanzee enclosure at Kyoto City Zoo; chimpanzee shot dead in emergency",
+  "publishedAt": null,
+  "draftSavedAt": "2026-09-29",
+  "image": "chimpanzee-stock.jpg",
+  "notes": "Unpublished from live site; restore with scripts/add-zoo-article.mjs or move back to articles/-/92001/"
+}
