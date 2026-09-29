@@ -71,6 +71,8 @@ export function applyFooterEdits($) {
 
 export function applyArticleEdits($) {
   $('.article-sns').remove()
+  $('.article-v-wrap').remove()
+  $('.m-side-banner-wrap').remove()
 }
 
 export function linkHelpers(pageKind) {

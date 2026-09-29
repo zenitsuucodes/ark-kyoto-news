@@ -87,9 +87,9 @@ $('link[rel="canonical"]').attr('href', `../${id}/`)
 
 $('h1.article-ttl').attr('data-en', titleEn).text(titleJa)
 $('time.article-header-info__time')
-  .attr('datetime', '2026-09-28T13:30')
-  .attr('data-en', '- Sep 28, 2026 - 13:30')
-  .text('- 2026年9月28日 - 13:30')
+  .attr('datetime', '2026-09-29T13:30')
+  .attr('data-en', '- Sep 29, 2026 - 13:30')
+  .text('- 2026年9月29日 - 13:30')
 
 const figImg = $('.article-header-img-main img').first()
 figImg.attr('src', img).removeAttr('srcset')
@@ -111,9 +111,9 @@ bodyInner.append(wall)
 
 $('.article-body-bottom').remove()
 $('time.article-footer-info__time')
-  .attr('datetime', '2026-09-28T13:30')
-  .attr('data-en', 'Sep 28, 2026')
-  .text('2026年9月28日')
+  .attr('datetime', '2026-09-29T13:30')
+  .attr('data-en', 'Sep 29, 2026')
+  .text('2026年9月29日')
 
 const outDir = path.join(root, 'articles', '-', id)
 fs.mkdirSync(outDir, { recursive: true })
@@ -132,7 +132,7 @@ function insertLatest(htmlPath, linkPrefix) {
           <a class="m-article-item-ttl__link" href="${linkPrefix}articles/-/${id}/" data-en="${titleEn}">${titleJa}</a>
         </h3>
         <div class="m-article-info">
-          <time class="m-article-info__time" datetime="2026-09-28T13:30:00+09:00" data-en="Just now">たった今</time>
+          <time class="m-article-info__time" datetime="2026-09-29T13:30:00+09:00" data-en="Sep 29, 2026">2026年9月29日</time>
           <a class="m-article-info__link" href="${linkPrefix}list/partners/kyodo_news/">ARK KYOTO NEWS</a>
         </div>
       </div>
