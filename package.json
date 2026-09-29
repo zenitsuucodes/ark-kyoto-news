@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.mjs",
+    "build:vercel": "node -e \"console.log('Deploying prebuilt static HTML from repo root')\"",
     "build:fast": "node scripts/build-fast.mjs",
     "expand": "node scripts/expand-site.mjs",
     "localize": "node scripts/localize-site.mjs",
