@@ -1,0 +1,9 @@
+<svg viewBox="0 0 240 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ARK KYOTO NEWS">
+  <g fill="#bf1146">
+    <path d="m17.13 31.21h-8.56v8.56h17.13v-25.7h-8.57z"/>
+    <path d="m17.13 0h8.57v8.57h-8.57z"/>
+    <path d="m0 39.77h8.57v8.57h-8.57z"/>
+  </g>
+  <text x="28" y="21" font-family="'Open Sans', Arial, sans-serif" font-weight="700" font-size="13.5" letter-spacing="0.04em" fill="#111">ARK KYOTO</text>
+  <text x="28" y="40" font-family="'Open Sans', Arial, sans-serif" font-weight="700" font-size="13.5" letter-spacing="0.12em" fill="#bf1146">NEWS</text>
+</svg>

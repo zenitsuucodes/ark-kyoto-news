@@ -1,0 +1,19 @@
+{
+  "name": "ark-kyoto-news",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:fast": "node scripts/build-fast.mjs",
+    "expand": "node scripts/expand-site.mjs",
+    "localize": "node scripts/localize-site.mjs",
+    "info": "node scripts/build-info-pages.mjs",
+    "patch:footer": "node scripts/patch-footer.mjs",
+    "build:force": "node scripts/build.mjs --force",
+    "fetch": "node scripts/fetch-articles.mjs",
+    "fetch:force": "node scripts/fetch-articles.mjs --force",
+    "dev": "npx --yes serve . -p 5173"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
