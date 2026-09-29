@@ -69,6 +69,10 @@ export function applyFooterEdits($) {
   $('.g-footer-sns').remove()
 }
 
+export function applyArticleEdits($) {
+  $('.article-sns').remove()
+}
+
 export function linkHelpers(pageKind) {
   if (pageKind === 'index') {
     return {

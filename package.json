@@ -9,6 +9,7 @@
     "localize": "node scripts/localize-site.mjs",
     "info": "node scripts/build-info-pages.mjs",
     "patch:footer": "node scripts/patch-footer.mjs",
+    "patch:article-sns": "node scripts/patch-article-sns.mjs",
     "build:force": "node scripts/build.mjs --force",
     "fetch": "node scripts/fetch-articles.mjs",
     "fetch:force": "node scripts/fetch-articles.mjs --force",
