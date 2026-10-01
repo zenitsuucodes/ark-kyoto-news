@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext.jsx'
 import { useArticles } from '../hooks/useArticles.js'
 import { StoryRow } from '../components/StoryRow.jsx'
 import { formatDate } from '../utils/formatDate.js'
+import { articlePath } from '../utils/articleUrl.js'
 
 function byCategory(articles, slug) {
   if (slug === 'latest') return articles
@@ -35,7 +36,7 @@ export function HomePage() {
             <div className="jn-feature__lead">
               <span className="jn-label">{t('トップニュース', 'Top News')}</span>
               <h1 className="jn-feature__title">
-                <Link to={`/articles/${featured.id}`}>
+                <Link to={articlePath(featured)}>
                   {t(featured.titleJa, featured.titleEn)}
                 </Link>
               </h1>
@@ -50,7 +51,7 @@ export function HomePage() {
               </p>
             </div>
             {featured.image ? (
-              <Link to={`/articles/${featured.id}`} className="jn-feature__media">
+              <Link to={articlePath(featured)} className="jn-feature__media">
                 <img src={featured.image} alt="" />
               </Link>
             ) : null}
@@ -66,12 +67,12 @@ export function HomePage() {
               {latest.map((a) => (
                 <article key={a.id} className="jn-card">
                   {a.image ? (
-                    <Link to={`/articles/${a.id}`} className="jn-card__media">
+                    <Link to={articlePath(a)} className="jn-card__media">
                       <img src={a.image} alt="" loading="lazy" />
                     </Link>
                   ) : null}
                   <h3 className="jn-card__title">
-                    <Link to={`/articles/${a.id}`}>{t(a.titleJa, a.titleEn)}</Link>
+                    <Link to={articlePath(a)}>{t(a.titleJa, a.titleEn)}</Link>
                   </h3>
                   <time dateTime={a.publishedAt}>{formatDate(a.publishedAt, isEn)}</time>
                 </article>

@@ -12,8 +12,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/category/:slug" element={<ListPage />} />
-        <Route path="/articles/:id" element={<ArticlePage />} />
         <Route path="/articles/-/:id" element={<ArticlePage />} />
+        <Route path="/articles/:slug" element={<ArticlePage />} />
       </Routes>
       <Footer />
     </div>

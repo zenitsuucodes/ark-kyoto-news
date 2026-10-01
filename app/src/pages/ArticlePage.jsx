@@ -1,14 +1,26 @@
-import { Link, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext.jsx'
 import { useArticle, useArticles } from '../hooks/useArticles.js'
 import { StoryRow } from '../components/StoryRow.jsx'
 import { formatDate } from '../utils/formatDate.js'
+import { articlePath, resolveArticleId } from '../utils/articleUrl.js'
 
 export function ArticlePage() {
-  const { id } = useParams()
+  const { slug, id: legacyId } = useParams()
+  const param = legacyId ?? slug
+  const articleId = resolveArticleId(param)
+  const navigate = useNavigate()
   const { t, isEn } = useLanguage()
-  const { article, loading } = useArticle(id)
+  const { article, loading } = useArticle(articleId)
   const { articles } = useArticles()
+
+  useEffect(() => {
+    if (!article || legacyId != null) return
+    if (param === article.id && article.slug) {
+      navigate(articlePath(article), { replace: true })
+    }
+  }, [article, param, legacyId, navigate])
 
   if (loading) {
     return (
@@ -28,7 +40,7 @@ export function ArticlePage() {
   }
 
   const body = isEn ? article.bodyEn : article.bodyJa
-  const related = articles.filter((a) => a.id !== id).slice(0, 5)
+  const related = articles.filter((a) => a.id !== articleId).slice(0, 5)
 
   return (
     <main className="jn-main">
