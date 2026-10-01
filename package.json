@@ -1,21 +1,32 @@
 {
   "name": "ark-kyoto-news",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:vercel": "node -e \"console.log('Deploying prebuilt static HTML from repo root')\"",
+    "build:data": "node scripts/build-react-data.mjs",
+    "build:vercel": "npm run build:data && vite build --config app/vite.config.js",
     "build:fast": "node scripts/build-fast.mjs",
     "expand": "node scripts/expand-site.mjs",
     "localize": "node scripts/localize-site.mjs",
     "info": "node scripts/build-info-pages.mjs",
     "patch:footer": "node scripts/patch-footer.mjs",
     "patch:article-sns": "node scripts/patch-article-sns.mjs",
+    "modern": "node scripts/apply-modern-theme.mjs",
     "build:force": "node scripts/build.mjs --force",
     "fetch": "node scripts/fetch-articles.mjs",
     "fetch:force": "node scripts/fetch-articles.mjs --force",
-    "dev": "npx --yes serve . -p 5173"
+    "dev": "npm run build:data && vite --config app/vite.config.js",
+    "dev:static": "npx --yes serve . -p 8080"
   },
   "dependencies": {
-    "cheerio": "^1.0.0"
+    "cheerio": "^1.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.0",
+    "vite": "^6.3.5"
   }
 }
