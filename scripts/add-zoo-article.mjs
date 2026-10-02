@@ -28,20 +28,20 @@ const paragraphs = [
     '子どもが飼育エリア内にいることに気づいた来園者が職員に知らせ、動物園側は周辺から来園者を退避させるとともに、チンパンジーを屋内施設へ戻す対応を開始した。',
   ],
   [
-    'Most of the animals followed keepers\' guidance, but one male chimpanzee named Genji remained outside and approached the child.',
-    'ほとんどの個体は職員の誘導に応じたものの、オスのチンパンジー1頭、「源氏（Genji）」が屋外に残り、子どもに近づいた。',
+    'Most of the animals followed keepers\' guidance, but one male chimpanzee named Genku remained outside and approached the child.',
+    'ほとんどの個体は職員の誘導に応じたものの、オスのチンパンジー1頭、「玄空（Genku）」が屋外に残り、子どもに近づいた。',
   ],
   [
-    'Keepers repeatedly tried to lure Genji away from the child and back indoors, but he did not respond to their attempts, the zoo said.',
-    '動物園によると、飼育員は源氏を子どもから離し、屋内へ戻そうと繰り返し試みたが、誘導には応じなかったという。',
+    'Keepers repeatedly tried to lure Genku away from the child and back indoors, but he did not respond to their attempts, the zoo said.',
+    '動物園によると、飼育員は玄空を子どもから離し、屋内へ戻そうと繰り返し試みたが、誘導には応じなかったという。',
   ],
   [
-    'With the child still inside the enclosure and Genji within arm\'s reach, the emergency team concluded the boy\'s life was in imminent danger and decided to shoot Genji.',
-    '子どもが依然として飼育エリア内におり、源氏がすぐ手の届く距離にいたことから、緊急対応チームは子どもの生命に危険が及ぶ可能性があると判断し、源氏を射殺する決断を下した。',
+    'With the child still inside the enclosure and Genku within arm\'s reach, the emergency team concluded the boy\'s life was in imminent danger and decided to shoot Genku.',
+    '子どもが依然として飼育エリア内におり、玄空がすぐ手の届く距離にいたことから、緊急対応チームは子どもの生命に危険が及ぶ可能性があると判断し、玄空を射殺する決断を下した。',
   ],
   [
-    'Genji died at the scene.',
-    '源氏はその場で死亡した。',
+    'Genku died at the scene.',
+    '玄空はその場で死亡した。',
   ],
   [
     'The child was rescued immediately afterward and taken to a city hospital for examination. He suffered minor injuries believed to have occurred when he entered the habitat but is in stable condition, officials said.',
@@ -56,8 +56,8 @@ const paragraphs = [
     '動物園の広報担当者は、「チンパンジーは非常に力の強い動物で、行動が短時間で変化する可能性があります。幼い子どもの安全が脅かされる緊急事態の中で、職員は数分以内に判断を下さなければなりませんでした」と説明した。',
   ],
   [
-    'Genji had lived at the zoo for more than 10 years and was known among keepers as an intelligent, social animal.',
-    '源氏は10年以上にわたり動物園で飼育され、飼育員からは知能が高く、社会性のある個体として知られていたという。',
+    'Genku had lived at the zoo for more than 10 years and was known among keepers as an intelligent, social animal.',
+    '玄空は10年以上にわたり動物園で飼育され、飼育員からは知能が高く、社会性のある個体として知られていたという。',
   ],
   [
     'The zoo has temporarily closed the chimpanzee habitat and is investigating how the child was able to get inside, including reviewing visitor barriers, safety equipment, and security camera footage.',

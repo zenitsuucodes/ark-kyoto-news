@@ -9,7 +9,7 @@ const draftDir = path.join(root, '_drafts', 'articles', '-', id)
 const metaPath = path.join(draftDir, 'draft.json')
 
 const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'))
-const pub = meta.publishedAt?.slice(0, 16) ?? '2026-10-01T15:00'
+const pub = meta.publishedAt?.slice(0, 16) ?? '2026-10-02T15:00'
 const pubIso = pub.includes('+') ? meta.publishedAt : `${pub}:00+09:00`
 const pubJaDate = pubIso.slice(0, 10).replace(/-/g, '年').replace(/年(\d+)年/, '年$1月').replace(/月(\d+)$/, '月$1日')
 // 2026-10-01 -> 2026年10月1日
@@ -66,8 +66,8 @@ fs.writeFileSync(
   'utf8',
 )
 
-const teaserEn = `KYOTO — A young child entered a chimpanzee enclosure at Kyoto City Zoo, and the zoo's emergency response team shot and killed one chimpanzee to protect the child, the zoo said. The incident occurred on Saturday afternoon when a 4-year-old boy became separated from his family and entered the outdoor habitat. Most chimpanzees followed keepers indoors, but one male named Genji remained and approached the boy…`
-const teaserJa = `京都 — 京都市動物園で、幼い子どもがチンパンジーの飼育エリア内に入り込む事故があり、子どもの安全を確保するため、園の緊急対応チームがチンパンジー1頭を射殺した。事故が発生したのは土曜日の午後。4歳の男の子が家族とはぐれ、屋外の飼育エリア内に入り込んだ。ほとんどの個体は職員の誘導に応じたが、「源氏（Genji）」が屋外に残り子どもに近づいた…`
+const teaserEn = `KYOTO — A young child entered a chimpanzee enclosure at Kyoto City Zoo, and the zoo's emergency response team shot and killed one chimpanzee to protect the child, the zoo said. The incident occurred on Saturday afternoon when a 4-year-old boy became separated from his family and entered the outdoor habitat. Most chimpanzees followed keepers indoors, but one male named Genku remained and approached the boy…`
+const teaserJa = `京都 — 京都市動物園で、幼い子どもがチンパンジーの飼育エリア内に入り込む事故があり、子どもの安全を確保するため、園の緊急対応チームがチンパンジー1頭を射殺した。事故が発生したのは土曜日の午後。4歳の男の子が家族とはぐれ、屋外の飼育エリア内に入り込んだ。ほとんどの個体は職員の誘導に応じたが、「玄空（Genku）」が屋外に残り子どもに近づいた…`
 
 function setTopNews($) {
   $('.top-news-main').html(`<a class="top-news-main__cover" href="./articles/-/${id}/">
