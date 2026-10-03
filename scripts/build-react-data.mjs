@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import * as cheerio from 'cheerio'
-import { slugifyTitle } from './slugify-title.mjs'
+import { normalizeArticleSlug, slugifyTitle } from './slugify-title.mjs'
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 const articlesRoot = path.join(root, 'articles', '-')
@@ -48,9 +48,14 @@ function parseArticle(id, html) {
     if (en) bodyEn.push(en)
   })
 
+  const slugOverride = $('meta[name="article-slug"]').attr('content')
+  const slug = slugOverride
+    ? normalizeArticleSlug(slugOverride, id)
+    : slugifyTitle(titleEn, id)
+
   return {
     id,
-    slug: slugifyTitle(titleEn, id),
+    slug,
     titleJa,
     titleEn,
     publishedAt: datetime.length === 16 ? `${datetime}:00+09:00` : datetime,

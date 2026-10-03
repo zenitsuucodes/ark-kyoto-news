@@ -1,3 +1,10 @@
+/** Ensure slug ends with `-{id}` (used by meta name="article-slug" overrides). */
+export function normalizeArticleSlug(slug, id) {
+  const s = (slug || '').trim().toLowerCase().replace(/-+/g, '-').replace(/^-|-$/g, '')
+  if (!s) return slugifyTitle('', id)
+  return s.endsWith(`-${id}`) ? s : `${s}-${id}`
+}
+
 export function slugifyTitle(title, id) {
   let s = (title || '')
     .toLowerCase()
